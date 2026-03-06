@@ -1,0 +1,24 @@
+# 命令执行 docker-compose -f docker-compose-software-aliyun.yml up -d
+# docker 代理和使用文档；https://bugstack.cn/md/road-map/docker-what.html https://bugstack.cn/md/road-map/docker.html
+version: '3.9'
+services:
+  test:
+    image:  duke/test:1.0-SNAPSHOT
+    container_name: test
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    environment:
+    networks:
+      - dev-ops_my-network
+    volumes:
+      - ./log:/data/log
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  dev-ops_my-network:
+    driver: bridge                                                                                                                      1,1           Top
