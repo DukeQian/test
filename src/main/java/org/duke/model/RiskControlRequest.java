@@ -1,4 +1,4 @@
-package org.duke;
+package org.duke.model;
 
 import lombok.Data;
 import java.util.Map;
