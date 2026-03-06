@@ -19,7 +19,7 @@
 
 **类型**: `application/json`
 
-**数据结构**: `RiskControlRequest`
+**数据结构**: `IndicatorRequest`
 
 | 字段名 | 类型 | 必填 | 说明 |
 |--------|------|------|------|

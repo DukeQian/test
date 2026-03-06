@@ -1,6 +1,6 @@
 package org.duke.controller;
 
-import org.duke.model.RiskControlRequest;
+import org.duke.model.IndicatorRequest;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import java.util.Map;
 public class IndicatorController {
 
     @PostMapping("getIndicatorData")
-    public Map<String, String> getIndicatorData(@RequestBody RiskControlRequest request) {
+    public Map<String, String> getIndicatorData(@RequestBody IndicatorRequest request) {
         Map<String, String> result = new HashMap<>();
         if (request.getIndicators() != null) {
             for (String indicator : request.getIndicators()) {
